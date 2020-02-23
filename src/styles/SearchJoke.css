@@ -1,0 +1,27 @@
+.search-jokes {
+	color: #002663;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+	justify-content: center;
+	padding: 50px;
+	text-align: center;
+}
+.name-form {
+	padding: 10px;
+}
+
+input{
+	margin: 5px;
+	 text-align:center;
+	 border: none;
+    border-bottom: 1px solid #ddd;  
+}
+.search-btn-text {
+	padding: 10px;
+}
+i {
+	color: #036ab8;
+	font-size: 30px;
+}

@@ -9,8 +9,7 @@ const Navbar = () => (
 			<Link className="link" id="search-joke" to="/search-joke" >Search Joke</Link>
 			<Link className="link" id="infinite-jokes" to="/infinite-jokes" >Infinite Jokes</Link>
 		</div>
-		<h1><span id="chuck">Chuck</span> <span id="norris">Norris</span> <span className="jokes">Jokes</span></h1>
-
+		<h1><span id="chuck">Chuck</span> <span id="norris">Norris</span> <span id="jokes">Jokes</span></h1>
 	</div>
 )
 export default Navbar;

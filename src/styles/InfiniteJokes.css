@@ -1,0 +1,15 @@
+.infinite-jokes {
+	color: #002663;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+	justify-content: center;
+	padding: 50px;
+	text-align: center;
+}
+
+.error {
+	font-weight: 700;
+	margin: 20px;
+}

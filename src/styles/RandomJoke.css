@@ -1,0 +1,9 @@
+.random-joke {
+	color: #002663;
+	margin: 30px;
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+	justify-content: center;
+	text-align: center;
+}
