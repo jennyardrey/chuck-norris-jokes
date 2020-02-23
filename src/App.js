@@ -12,7 +12,7 @@ class App extends Component {
 		super(props);
 		this.state = {
 			joke: "",
-			jokes: [],
+			jokes: []
 		}
 	}
 
@@ -24,6 +24,20 @@ class App extends Component {
 				this.setState({ joke: joke.data.value.joke })
 			)
 	}
+
+	manyJokes = event => {
+		// event.preventDefault();
+		Axios.get(`http://api.icndb.com/jokes/random/20?exclude=[explicit]&escape=javascript`)
+			.then(joke =>
+				this.setState({ jokes: joke.data.value })
+			)
+		setTimeout(() => {
+			this.setState({
+				jokes: this.state.jokes.concat(Array.from({ length: 20 }))
+			});
+		}, 1500)
+	}
+
 
 	render() {
 		return (
@@ -43,10 +57,11 @@ class App extends Component {
 						<Route exact path="/search-joke"
 							component={SearchJoke}
 						/>
-						<Route exact path="infinite-jokes"
+						<Route exact path="/infinite-jokes"
 							render={props => (
 								<InfiniteJokes {...props}
 									jokes={this.state.jokes}
+									manyJokes={this.manyJokes}
 								/>
 							)}
 						/>
