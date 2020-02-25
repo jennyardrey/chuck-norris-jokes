@@ -33,7 +33,7 @@ class SearchJoke extends Component {
 					type="text" name="last-name" placeholder="Last name..."
 					onChange={e => this.setState({ lastName: e.target.value })}></input>
 			</div>
-			{this.state.nameJoke && this.state.nameJoke.length > 0 ? <JokeCard joke={this.state.nameJoke} /> : <div className="error-msg">Please fill in both fields</div>}
+			{this.state.nameJoke && this.state.nameJoke.length > 0 ? <JokeCard joke={this.state.nameJoke} /> : <div className="error-msg">Please fill in both fields to search jokes</div>}
 			<button disabled={!isEnabled} className="joke-btn" onClick={this.searchName}><span className="search-btn-text">Search</span><i className="chevron fas fa-chevron-circle-right"></i></button>
 		</div>
 	}
