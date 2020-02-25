@@ -20,17 +20,21 @@ class SearchJoke extends Component {
 			)
 	}
 	render() {
+		const isEnabled = this.state.firstName.length > 0 && this.state.lastName.length > 0
+		const firstNameErr = !this.state.firstName
+		const lastNameErr = !this.state.lastName
+
 		return <div className="search-jokes">
 			<div className="name-form">
-				<input className="first-name" placeholder="First name..."
+				<input className={firstNameErr ? "error first-name" : "first-name"} placeholder="First name..."
 					onChange={e => this.setState({ firstName: e.target.value })}>
 				</input>
-				<input className="last-name"
+				<input className={lastNameErr ? "error last-name" : "last-name"}
 					type="text" name="last-name" placeholder="Last name..."
 					onChange={e => this.setState({ lastName: e.target.value })}></input>
 			</div>
-			{this.state.nameJoke && this.state.nameJoke.length > 0 ? <JokeCard joke={this.state.nameJoke} /> : <div className="error">Search 'facts' about yourself...</div>}
-			<button className="joke-btn" onClick={this.searchName}><span className="search-btn-text">Search</span><i className="chevron" class="fas fa-chevron-circle-right"></i></button>
+			{this.state.nameJoke && this.state.nameJoke.length > 0 ? <JokeCard joke={this.state.nameJoke} /> : <div className="error-msg">Please fill in both fields</div>}
+			<button disabled={!isEnabled} className="joke-btn" onClick={this.searchName}><span className="search-btn-text">Search</span><i className="chevron fas fa-chevron-circle-right"></i></button>
 		</div>
 	}
 }

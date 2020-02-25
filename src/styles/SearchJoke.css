@@ -25,3 +25,11 @@ i {
 	color: #036ab8;
 	font-size: 30px;
 }
+
+.error {
+	border-bottom: 1px solid red;
+}
+
+.error-msg {
+	margin: 10px;
+}

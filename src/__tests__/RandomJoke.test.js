@@ -1,7 +1,7 @@
 import RandomJoke from '../components/RandomJoke';
 import JokeCard from '../components/JokeCard'
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 const props = {
 	joke: "Chuck Norris can make a class that is both abstract and final.",

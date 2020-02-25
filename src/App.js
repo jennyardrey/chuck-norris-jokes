@@ -26,16 +26,11 @@ class App extends Component {
 	}
 
 	manyJokes = event => {
-		// event.preventDefault();
-		Axios.get(`http://api.icndb.com/jokes/random/20?exclude=[explicit]&escape=javascript`)
+		event.preventDefault();
+		Axios.get(`http://api.icndb.com/jokes/random/549?exclude=[explicit]&escape=javascript`)
 			.then(joke =>
 				this.setState({ jokes: joke.data.value })
 			)
-		setTimeout(() => {
-			this.setState({
-				jokes: this.state.jokes.concat(Array.from({ length: 20 }))
-			});
-		}, 1500)
 	}
 
 

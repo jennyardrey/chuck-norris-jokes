@@ -13,3 +13,7 @@ Navigate inside the directory and install all dependencies by entering the follo
 Once completed, run:
 
 `npm start`
+
+In the future, I would add the following features:
+1. Infinite scrolling feature for Infinte Jokes page
+2. Replace male pronouns with gender neutral pronouns for Search Joke feature
